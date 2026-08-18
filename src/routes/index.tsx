@@ -4,11 +4,11 @@ import {
   ArrowRight, Smartphone, Brain, Cloud, Palette, Briefcase,ClipboardCheck,
   Bot,
   Network,
-  Gauge,
+  Gauge,SearchCheck,ClipboardList,ListChecks,FileCheck2,
   MonitorSmartphone,
   BriefcaseBusiness,
   Shield, Rocket, Users, Award, CheckCircle2, Star, ChevronDown,
-  Search, Lightbulb, Cpu, TestTube2, Send,
+  Search, Lightbulb, Cpu, TestTube2, Send,CircleAlert,ShieldCheck,BadgeCheck,
 } from "lucide-react";
 import { Section } from "../components/section";
 import { HeroSection } from "../components/hero-section";
@@ -44,18 +44,18 @@ const stats = [
 ];
 
 const whyUs = [
-  { icon: Shield, title: "Secure & Scalable", desc: "Building applications that are secure, reliable, and ready to grow." },
-  { icon: Rocket, title: "Rapid Delivery", desc: "We deliver high-quality solutions quickly through agile development, efficient workflows, and continuous collaboration." },
-  { icon: Users, title: "Expert Team", desc: "Experienced professionals committed to quality and excellence." },
-  { icon: Award, title: "Proven Results", desc: "Your success is our mission, and every decision is made with your goals in mind." },
+  { icon: BadgeCheck, title: "Quality You Can Trust", desc: "Thorough testing helps identify defects early and deliver stable, reliable software to your customers." },
+  { icon: Rocket, title: "Faster Releases", desc: "Smart automation and efficient QA processes help teams release high-quality software faster and with confidence." },
+  { icon: Users, title: "Expert QA Team", desc: "Experienced QA professionals bring proven testing expertise across web, mobile, API, automation, and performance testing." },
+  { icon: ShieldCheck, title: "Reduced Risk", desc: "Identify critical issues before production, reduce release risks, and improve the overall quality of your product." },
 ];
 
 const process = [
-  { icon: Search, title: "Discovery", desc: "Deep dive into your goals, users, and constraints." },
-  { icon: Lightbulb, title: "Strategy", desc: "Architecture, tech stack, and roadmap alignment." },
-  { icon: Cpu, title: "Build", desc: "Iterative development with weekly demos." },
-  { icon: TestTube2, title: "QA & Launch", desc: "Automated testing, security review, deployment." },
-  { icon: Send, title: "Scale & Support", desc: "Ongoing optimization and 24/7 monitoring." },
+  { icon: SearchCheck, title: "Discovery & Requirements", desc: "Understand your product, users, business goals, requirements, and potential quality risks." },
+  { icon: ClipboardList, title: "Test Strategy", desc: "Define the testing approach, scope, test coverage, environments, tools, and quality objectives." },
+  { icon: ListChecks, title: "Test Execution", desc: "Execute functional, regression, API, mobile, web, and exploratory testing to identify defects early." },
+  { icon: FileCheck2, title: "Quality Validation", desc: "Validate integrations, and verify application quality across releases." },
+  { icon: Rocket, title: "Release", desc: "Support release readiness, monitor quality, analyze defects, and continuously improve the testing process." },
 ];
 
 const tech = [
@@ -162,9 +162,9 @@ function Home() {
 
       {/* WHY US */}
       <Section
-        eyebrow="Why PrimeRiseTech"
-        title={<>The Partner You Can <span className="text-gradient">Bet On</span></>}
-        subtitle="We help businesses innovate faster, scale smarter, and succeed through reliable technology and strategic expertise."
+        eyebrow="WHY CHOOSE US"
+        title={<>The Partner You Can <span className="text-gradient">Rely On</span></>}
+        subtitle="We help businesses deliver reliable, high-quality software through smarter testing, automation, and quality engineering."
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {whyUs.map((w, i) => (
@@ -179,9 +179,9 @@ function Home() {
 
       {/* PROCESS */}
       <Section
-        eyebrow="How We Work"
-        title={<>Our <span className="text-gradient">Development Process</span></>}
-        subtitle="A proven five-stage methodology, refined across 250+ projects."
+        eyebrow="HOW WE DELIVER"
+        title={<>Our <span className="text-gradient">QA Delivery Processs</span></>}
+        subtitle="A structured, risk-based approach to delivering reliable software at every stage."
       >
         <div className="relative">
           <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
