@@ -1,8 +1,11 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+html.dark,
+.dark {
+  --background: oklch(0.13 0.045 260);
+  --foreground: oklch(0.97 0.01 240);
+}
 
 :root {
   --radius: 0.875rem;
@@ -12,6 +15,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -82,9 +86,11 @@
   * {
     border-color: var(--color-border);
   }
+
   html {
     scroll-behavior: smooth;
   }
+
   body {
     background: var(--gradient-hero);
     background-attachment: fixed;
@@ -92,61 +98,69 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
+
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
 }
 
-@utility glass {
-  background: color-mix(in oklab, var(--card) 60%, transparent);
-  backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid color-mix(in oklab, var(--cyan) 15%, transparent);
-}
-
-@utility glass-hover {
-  transition: all 0.3s ease;
-  &:hover {
-    border-color: color-mix(in oklab, var(--cyan) 40%, transparent);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-glow);
+@layer utilities {
+  .glass {
+    background: color-mix(in oklab, var(--card) 60%, transparent);
+    backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid color-mix(in oklab, var(--cyan) 15%, transparent);
   }
-}
 
-@utility text-gradient {
-  background: linear-gradient(135deg, var(--cyan-glow), var(--cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+  .glass-hover {
+    transition: all 0.3s ease;
 
-@utility bg-gradient-primary {
-  background: var(--gradient-primary);
-}
+    &:hover {
+      border-color: color-mix(in oklab, var(--cyan) 40%, transparent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+  }
 
-@utility grid-pattern {
-  background-image:
-    linear-gradient(color-mix(in oklab, var(--cyan) 8%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in oklab, var(--cyan) 8%, transparent) 1px, transparent 1px);
-  background-size: 40px 40px;
+  .text-gradient {
+    background: linear-gradient(135deg, var(--cyan-glow), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(color-mix(in oklab, var(--cyan) 8%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in oklab, var(--cyan) 8%, transparent) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
+
 @keyframes hero-float {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-14px) scale(1.01); }
 }
+
 @keyframes glow-pulse {
   0%, 100% { opacity: 0.5; }
   50% { opacity: 1; }
 }
+
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 @keyframes particle {
   0% { transform: translate3d(0, 0, 0); opacity: 0; }
   10% { opacity: 1; }
@@ -154,24 +168,24 @@
   100% { transform: translate3d(30px, -120px, 0); opacity: 0; }
 }
 
-@utility animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-@utility animate-hero-float {
-  animation: hero-float 10s ease-in-out infinite;
-}
-@utility animate-glow-pulse {
-  animation: glow-pulse 3s ease-in-out infinite;
-}
-@utility animate-fade-up {
-  animation: fade-up 0.8s ease-out both;
-}
-@utility animate-particle {
-  animation: particle linear infinite;
-}
-@utility animate-glow-pulse {
-  animation: glow-pulse 3s ease-in-out infinite;
-}
-@utility animate-fade-up {
-  animation: fade-up 0.8s ease-out both;
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-hero-float {
+    animation: hero-float 10s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out both;
+  }
+
+  .animate-particle {
+    animation: particle linear infinite;
+  }
 }

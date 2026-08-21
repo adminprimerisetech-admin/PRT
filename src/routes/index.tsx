@@ -17,9 +17,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "PrimeRiseTech" },
-      { name: "description", content: "PrimeRiseTech delivers custom software, AI, cloud, and digital solutions designed to help businesses innovate, scale, and rise above the competition." },
+      { name: "description", content: "PrimeRiseTech helps businesses deliver reliable software through expert QA, intelligent testing, and automation." },
       { property: "og:title", content: "PrimeRiseTech" },
-      { property: "og:description", content: "PrimeRiseTech delivers custom software, AI, cloud, and digital solutions designed to help businesses innovate, scale, and rise above the competition." },
+      { property: "og:description", content: "PrimeRiseTech helps businesses deliver reliable software through expert QA, intelligent testing, and automation." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -37,8 +37,8 @@ const services = [
 ];
 
 const stats = [
-  { value: 100, suffix: "+", label: "Projects Delivered" },
-  { value: 50, suffix: "+", label: "Enterprise Clients" },
+  { value: 50, suffix: "+", label: "Projects Delivered" },
+  { value: 10, suffix: "+", label: "Enterprise Clients" },
   { value: 10, suffix: "+", label: "Years of Expertise" },
   { value: 98, suffix: "%", label: "Client Satisfaction" },
 ];
@@ -59,23 +59,61 @@ const process = [
 ];
 
 const tech = [
-  "React", "Next.js", "TypeScript", "Node.js", "Python", "Go",
-  "AWS", "Azure", "Kubernetes", "PostgreSQL", "TensorFlow", "OpenAI",
-  "Swift", "Kotlin", "Flutter", "GraphQL",
+"Test Management & Defect Tracking",
+"Jira",
+"Azure DevOps",
+"TestRail",
+"Zephyr",
+"Xray",
+"TestLink",
+"BrowserStack",
+"LambdaTest",
+"Postman",
+"Charles Proxy",
+"Selenium",
+"Playwright",
+"Firebase",
+"SoapUI",
+"REST Assured",
+"Swagger",
+"JMeter",
+"Toad DB",
+"DBeaver",
+"MySQL",
+"Appium",
+"Jenkins",
+"GitHub Actions",
+"Proxyman",
 ];
 
-const testimonials = [
-  { name: "Sarah Chen", role: "CTO, Nexora Finance", text: "PrimeRiseTech rebuilt our trading platform end-to-end. Latency dropped 60%, and their team feels like an extension of ours." },
-  { name: "Marcus Weber", role: "VP Engineering, Helix Logistics", text: "Their AI team delivered a demand-forecasting model that saved us $2.4M in the first year. Exceptional partners." },
-  { name: "Ana Ribeiro", role: "Founder, Bloom Health", text: "From cloud migration to HIPAA compliance — flawless execution. Would recommend to any healthcare startup." },
+/*const testimonials = [
+  { name: "Software Product Team", text: "A structured testing approach helped us identify critical issues earlier and improve confidence in every release." },
+  //{ name: "Marcus Weber", role: "VP Engineering, Helix Logistics", text: "Their AI team delivered a demand-forecasting model that saved us $2.4M in the first year. Exceptional partners." },
+  { name: "Engineering Team", role: " ", text: "Their automation approach reduced repetitive testing and helped our team accelerate regression cycles." },
+  { name: "Product Team", text: "Clear QA processes and detailed reporting made it easier for our team to understand and resolve quality risks." },
 ];
-
+*/
 const faqs = [
-  { q: "How do you price projects?", a: "We offer fixed-price for well-scoped work, and time & materials for evolving initiatives. Every engagement starts with a free discovery call." },
-  { q: "How long does a typical project take?", a: "MVPs ship in 8–12 weeks. Enterprise platforms range from 4–9 months depending on scope. We provide clear milestone-based timelines." },
-  { q: "Do you sign NDAs?", a: "Yes — always. NDAs are executed before any technical or business discussion." },
-  { q: "Do you work with startups or only enterprises?", a: "Both. We have dedicated tracks for early-stage startups (lean MVPs) and enterprise-scale transformation." },
-  { q: "What's your team composition?", a: "Senior engineers, architects, designers, PMs, and QA. Every project has a dedicated tech lead as your single point of contact." },
+  {
+    q: "How do you price QA and testing projects?",
+    a: "We tailor each engagement to the project scope, complexity, and delivery pace. For well-defined work, we typically offer fixed-fee pricing; for evolving initiatives, we recommend time & materials."
+  },
+  {
+    q: "What types of testing do you support?",
+    a: "We provide functional, regression, API, performance, mobile, web, accessibility, and automation testing designed to reduce release risk and improve product quality."
+  },
+  {
+    q: "How long does a typical engagement take?",
+    a: "Most engagements run from a few weeks to several months depending on product complexity, testing scope, and timeline requirements. We define milestones early for clarity and predictability."
+  },
+  {
+    q: "Do you sign NDAs and protect confidential information?",
+    a: "Yes. We can sign NDAs and work under strict confidentiality requirements to protect your product, data, and strategic information."
+  },
+  {
+    q: "Can you work alongside our internal team?",
+    a: "Absolutely. We regularly integrate with internal engineering teams to strengthen QA coverage, accelerate automation, and improve release confidence without disrupting delivery."
+  }
 ];
 
 function useCountUp(target: number, duration = 2000, start = false) {
@@ -138,7 +176,7 @@ function Home() {
       <Section
         eyebrow="OUR SERVICES"
         title={<>Innovative Solutions. <span className="text-gradient">Powerful Results.</span></>}
-        subtitle="PrimeRiseTech delivers custom software, AI, cloud, and digital solutions designed to help businesses innovate, scale, and rise above the competition."
+        subtitle="PrimeRiseTech helps businesses deliver reliable software through expert QA, intelligent testing, and automation."
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
@@ -180,7 +218,7 @@ function Home() {
       {/* PROCESS */}
       <Section
         eyebrow="HOW WE DELIVER"
-        title={<>Our <span className="text-gradient">QA Delivery Processs</span></>}
+        title={<>Our <span className="text-gradient">QA Delivery Process</span></>}
         subtitle="A structured, risk-based approach to delivering reliable software at every stage."
       >
         <div className="relative">
@@ -202,9 +240,9 @@ function Home() {
 
       {/* TECH */}
       <Section
-        eyebrow="Our Stack"
-        title={<>Technologies <span className="text-gradient">We Use</span></>}
-        subtitle="Best-in-class tools, chosen per project&nbsp; never trend-driven."
+        eyebrow="QA TECHNOLOGY STACK"
+        title={<>Tools & Technologies <span className="text-gradient">We Use</span></>}
+        subtitle="Industry-leading QA tools and frameworks selected to deliver reliable, scalable, and high-quality software."
       >
         <div className="flex flex-wrap justify-center gap-3">
           {tech.map((t, i) => (
@@ -219,7 +257,7 @@ function Home() {
         </div>
       </Section>
 
-      {/* TESTIMONIALS */}
+    {/* TESTIMONIALS
       <Section
         eyebrow="Client Voices"
         title={<>What Our <span className="text-gradient">Clients Say</span></>}
@@ -228,7 +266,7 @@ function Home() {
           {testimonials.map((t, i) => (
             <div key={t.name} className="glass rounded-2xl p-8 glass-hover animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
               <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, j) => <Star key={j} className="h-4 w-4 fill-primary text-primary" />)}
+                {[...Array(5)].map((_, j) => <Star key={j} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
               </div>
               <p className="text-sm leading-relaxed text-foreground/90">"{t.text}"</p>
               <div className="mt-6 pt-6 border-t border-border/50">
@@ -239,6 +277,7 @@ function Home() {
           ))}
         </div>
       </Section>
+      */}
 
       {/* FAQ */}
       <Section
@@ -272,16 +311,16 @@ function Home() {
             <div className="absolute inset-0 bg-gradient-primary opacity-10" />
             <div className="relative">
               <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-                Ready to build something <span className="text-gradient">extraordinary?</span>
+                Ready to deliver <span className="text-gradient">reliable software?</span>
               </h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Let's talk about your vision. Free 30-minute strategy call, no strings attached.
+                Let's find what's breaking before your users do.
               </p>
               <Link
                 to="/contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-105 transition"
               >
-                Book Your Consultation <ArrowRight className="h-4 w-4" />
+                 Book a Free QA Consultation <ArrowRight className="h-4 w-4" />
               </Link>
               <div className="mt-6 flex items-center justify-center gap-6 text-xs text-muted-foreground flex-wrap">
                 <span className="flex items-center gap-1"><CheckCircle2 className="h-4 w-4 text-primary" /> No commitments</span>

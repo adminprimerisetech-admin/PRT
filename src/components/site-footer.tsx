@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Zap, Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import { Zap, Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -16,15 +16,21 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Building future-ready digital solutions for modern enterprises worldwide.
+              Helping businesses ship reliable software through risk-based QA, testing, and automation.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Linkedin, Twitter, Github].map((Icon, i) => (
+              {[
+                { icon: Linkedin, href: "https://www.linkedin.com", label: "LinkedIn" },
+                { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+                { icon: Instagram, href: "https://www.instagram.com", label: "Instagram" },
+              ].map(({ icon: Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="grid h-9 w-9 place-items-center rounded-lg glass hover:text-primary transition"
-                  aria-label="Social link"
+                  aria-label={label}
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -45,11 +51,11 @@ export function SiteFooter() {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Web Development</li>
-              <li>Mobile Apps</li>
-              <li>AI Solutions</li>
-              <li>Cloud Solutions</li>
-              <li>UI/UX Design</li>
+              <li>Manual Testing</li>
+              <li>Test Automation</li>
+              <li>API Testing</li>
+              <li>Performance Testing</li>
+              <li>QA Consulting</li>
             </ul>
           </div>
 
@@ -62,7 +68,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                <a href="mailto:hello@primerisetech.com" className="hover:text-primary">hello@primerisetech.com</a>
+                <a href="mailto:hello@primerisetech.com" className="hover:text-primary">admin.primerisetech@gmail.com</a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary shrink-0" />

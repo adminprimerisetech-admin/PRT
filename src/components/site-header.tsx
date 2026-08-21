@@ -31,7 +31,7 @@ export function SiteHeader() {
           <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-primary shadow-[var(--shadow-glow)] group-hover:scale-105 transition">
             <Zap className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
           </div>
-          <span className="font-display text-xl font-bold tracking-tight">
+          <span className="font-display text-4xl font-bold tracking-tight">
             PrimeRise<span className="text-gradient">Tech</span>
           </span>
         </Link>
@@ -50,7 +50,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link
-            to="/contact"
+            to="/get-started"
             className="ml-3 rounded-full bg-gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-105 transition"
           >
             Get Started

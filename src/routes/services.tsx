@@ -35,17 +35,17 @@ const services = [
   {
     icon: Network, title: "API Testing",
     desc: "Thorough API validation covering functionality, data integrity, integrations, authentication, and performance.",
-    features: ["API endpoint testing", "Data validation", "Integration testing", "Authentication & authorization", "Performance testing", "Security testing"],
+    features: ["API endpoint Testing", "Authentication & Authorization", "Integration Testing", "Error Handling", "Rate Limiting & Throttling", "Versioning & Backward Compatibility"],
   },
   {
     icon: Gauge, title: "Performance Testing",
     desc: "Identify bottlenecks and ensure applications remain fast, stable, and reliable under real-world workloads.",
-    features: ["Load testing", "Stress testing", "Endurance testing", "Scalability testing", "Resource utilization analysis", "Performance monitoring"],
+    features: ["Load Testing", "Stress Testing", "Response Time Testing", "Scalability Testing", "Performance Regression Testing", "Bottleneck Analysis"],
   },
   {
     icon: MonitorSmartphone, title: "Mobile & Web Testing",
     desc: "End-to-end testing across browsers, devices, operating systems, and screen sizes for consistent experiences.",
-    features: ["Cross-browser compatibility", "Device-specific testing", "Responsive design validation", "Performance testing", "Usability testing", "Accessibility (WCAG 2.2)"],
+    features: ["Functional Testing", "UI/UX Testing", "Compatibility Testing", "Integration Testing", "Regression Testing", "System Testing", "Accessibility Testing", "Analytics Testing", "Ad Testing", "Usability Testing", "User Acceptance Testing", "End-to-End Testing"],
   },
   {
     icon: BriefcaseBusiness, title: "QA Consulting",
@@ -79,7 +79,7 @@ function Services() {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className="glass rounded-3xl p-8 sm:p-12 grid lg:grid-cols-[1fr_1.5fr] gap-8 items-center glass-hover animate-fade-up"
+              className="service-card glass rounded-3xl p-8 sm:p-12 grid lg:grid-cols-[1fr_1.5fr] gap-8 items-center glass-hover animate-fade-up"
               style={{ animationDelay: `${i * 80}ms` }}
             >
               <div>

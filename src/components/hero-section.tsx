@@ -87,13 +87,13 @@ export function HeroSection() {
         <div className="max-w-2xl animate-fade-up">
           <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary mb-6">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-glow-pulse" />
-            AI • CLOUD • SOFTWARE SOLUTIONS 
+            QA • TEST AUTOMATION • QUALITY ENGINEERING
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
             Rise&nbsp;with&nbsp; <span className="text-gradient">PrimeRiseTech</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-            PrimeRiseTech builds custom software, AI-powered applications, cloud platforms, and digital solutions that help businesses innovate faster, improve efficiency, and achieve sustainable growth.
+            PrimeRiseTech helps businesses deliver reliable software through expert QA, intelligent testing, and automation.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -114,7 +114,7 @@ export function HeroSection() {
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
             </div>
-            <span>Trusted by 100+ enterprises worldwide by delivering secure, scalable, and reliable software for businesses of all sizes.</span>
+            <span>Trusted by 10+ enterprises worldwide by delivering secure, scalable, and reliable software for businesses of all sizes.</span>
           </div>
         </div>
       </div>

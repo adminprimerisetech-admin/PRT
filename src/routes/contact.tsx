@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
 import { Section } from "../components/section";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/ui/select";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/contact")({
@@ -19,7 +26,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@primerisetech.com", href: "mailto:hello@primerisetech.com" },
+  { icon: Mail, label: "Email", value: "admin.primerisetech@gmail.com", href: "mailto:admin.primerisetech@gmail.com" },
   { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
   { icon: MapPin, label: "Office", value: "1234 Innovation Drive, San Francisco, CA 94107" },
   { icon: Clock, label: "Hours", value: "Mon–Fri: 9AM – 6PM PST" },
@@ -124,19 +131,35 @@ function Contact() {
                 <Field label="Company" value={form.company} onChange={(v) => setForm({ ...form, company: v })} placeholder="Your company" />
                 <div>
                   <label className="text-xs font-semibold text-primary uppercase tracking-wider">Service of Interest</label>
-                  <select
-                    value={form.service}
-                    onChange={(e) => setForm({ ...form, service: e.target.value })}
-                    className="mt-2 w-full rounded-xl bg-background/60 border border-border px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
+                  <Select
+                    value={form.service || undefined}
+                    onValueChange={(value) => setForm({ ...form, service: value })}
                   >
-                    <option value="">Select a service</option>
-                    <option>Web Development</option>
-                    <option>Mobile App Development</option>
-                    <option>AI Solutions</option>
-                    <option>Cloud Solutions</option>
-                    <option>UI/UX Design</option>
-                    <option>IT Consulting</option>
-                  </select>
+                    <SelectTrigger className="mt-2 w-full rounded-xl border border-border bg-[#0f1f34] px-4 py-3 text-sm text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition">
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+
+                    <SelectContent className="border border-border bg-[#0f1f34] text-white">
+                      <SelectItem value="Manual Testing" className="text-white focus:bg-[#15385d] focus:text-white">
+                        Manual Testing
+                      </SelectItem>
+                      <SelectItem value="Test Automation" className="text-white focus:bg-[#15385d] focus:text-white">
+                        Test Automation
+                      </SelectItem>
+                      <SelectItem value="API Testing" className="text-white focus:bg-[#15385d] focus:text-white">
+                        API Testing
+                      </SelectItem>
+                      <SelectItem value="Performance Testing" className="text-white focus:bg-[#15385d] focus:text-white">
+                        Performance Testing
+                      </SelectItem>
+                      <SelectItem value="UI/UX Testing" className="text-white focus:bg-[#15385d] focus:text-white">
+                        UI/UX Testing
+                      </SelectItem>
+                      <SelectItem value="QA Consulting" className="text-white focus:bg-[#15385d] focus:text-white">
+                        QA Consulting
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div>
                   <label className="text-xs font-semibold text-primary uppercase tracking-wider">Message *</label>
@@ -165,7 +188,6 @@ function Contact() {
     </>
   );
 }
-
 function Field({
   label, value, onChange, placeholder, type = "text",
 }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string; type?: string }) {
@@ -182,3 +204,4 @@ function Field({
     </div>
   );
 }
+
