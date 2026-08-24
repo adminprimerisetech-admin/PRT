@@ -43,20 +43,19 @@ function About() {
             <Sparkles className="h-3 w-3" /> About PrimeRiseTech
           </div>
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight">
-            Engineering the <span className="text-gradient">next generation</span> of digital business
+            Building Confidence Through<span className="text-gradient"> Software Quality</span> 
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're a global team of senior engineers, designers, and strategists on a mission
-            to help ambitious organizations turn technology into competitive advantage.
+            PrimeRiseTech provides end-to-end QA and testing solutions that help businesses identify defects early, reduce production risks, and deliver reliable software faster.
           </p>
         </div>
       </section>
 
       {/* STORY */}
-      <Section eyebrow="Our Story" title={<>From Startup to <span className="text-gradient">Global Partner</span></>}>
+      <Section eyebrow="Our Story" title={<>From Ideas<span className="text-gradient"> to Reality</span></>}>
         <div className="max-w-4xl mx-auto glass rounded-3xl p-10 sm:p-14 space-y-5 text-muted-foreground leading-relaxed">
           <p>
-            <span className="text-foreground font-semibold">PrimeRiseTech was founded in 2010</span> by a group of senior engineers who
+            <span className="text-foreground font-semibold">PrimeRiseTech was founded in 2021</span> by a group of senior engineers who
             believed enterprise software could be built better — faster, more secure, and more human.
           </p>
           <p>
@@ -115,7 +114,7 @@ function About() {
         </div>
       </Section>
 
-      {/* TEAM */}
+      {/* TEAM }
       <Section
         eyebrow="Meet the Team"
         title={<>Leaders Behind <span className="text-gradient">Every Project</span></>}
@@ -141,6 +140,7 @@ function About() {
           ))}
         </div>
       </Section>
+      */}
     </>
   );
 }

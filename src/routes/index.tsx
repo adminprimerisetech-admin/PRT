@@ -17,9 +17,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "PrimeRiseTech" },
-      { name: "description", content: "PrimeRiseTech helps businesses deliver reliable software through expert QA, intelligent testing, and automation." },
+      { name: "description", content: "PrimeRiseTech helps teams improve product quality with thorough QA, efficient testing, and technology-driven quality solutions." },
       { property: "og:title", content: "PrimeRiseTech" },
-      { property: "og:description", content: "PrimeRiseTech helps businesses deliver reliable software through expert QA, intelligent testing, and automation." },
+      { property: "og:description", content: "PrimeRiseTech helps teams improve product quality with thorough QA, efficient testing, and technology-driven quality solutions." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -28,17 +28,17 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: ClipboardCheck, title: "Manual Testing", desc: "Comprehensive functional, regression, exploratory, and usability testing to ensure reliable software releases." },
+  { icon: ClipboardCheck, title: "Manual QA - Web & Mobile", desc: "Comprehensive functional, regression, exploratory, and usability testing to ensure reliable software releases." },
   { icon: Bot, title: "Test Automation", desc: "Automated testing for web and mobile applications to ensure quality and performance." },
   { icon: Network, title: "API Testing", desc: "Thorough API validation covering functionality, data integrity, integrations, authentication, and performance." },
   { icon: Gauge, title: "Performance Testing", desc: "Identify bottlenecks and ensure applications remain fast, stable, and reliable under real-world workloads." },
-  { icon: MonitorSmartphone, title: "Mobile & Web Testing", desc: "End-to-end testing across browsers, devices, operating systems, and screen sizes for consistent experiences." },
+  { icon: MonitorSmartphone, title: "Database Testing", desc: "Comprehensive testing of database systems to ensure data integrity, performance, and reliability." },
   { icon: BriefcaseBusiness, title: "QA Consulting", desc: "Strategic QA guidance, test strategy, process improvement, and quality engineering solutions tailored to your business." },
 ];
 
 const stats = [
   { value: 50, suffix: "+", label: "Projects Delivered" },
-  { value: 10, suffix: "+", label: "Enterprise Clients" },
+  { value: 15, suffix: "+", label: "Enterprise Clients" },
   { value: 10, suffix: "+", label: "Years of Expertise" },
   { value: 98, suffix: "%", label: "Client Satisfaction" },
 ];
@@ -176,7 +176,7 @@ function Home() {
       <Section
         eyebrow="OUR SERVICES"
         title={<>Innovative Solutions. <span className="text-gradient">Powerful Results.</span></>}
-        subtitle="PrimeRiseTech helps businesses deliver reliable software through expert QA, intelligent testing, and automation."
+        subtitle="PrimeRiseTech helps teams improve product quality with thorough QA, efficient testing, and technology-driven quality solutions."
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (

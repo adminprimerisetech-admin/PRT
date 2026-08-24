@@ -87,7 +87,7 @@ export function HeroSection() {
         <div className="max-w-2xl animate-fade-up">
           <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary mb-6">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-glow-pulse" />
-            QA • TEST AUTOMATION • QUALITY ENGINEERING
+            Smarter QA • Better Software
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
             Rise&nbsp;with&nbsp; <span className="text-gradient">PrimeRiseTech</span>
@@ -114,7 +114,7 @@ export function HeroSection() {
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
             </div>
-            <span>Trusted by 10+ enterprises worldwide by delivering secure, scalable, and reliable software for businesses of all sizes.</span>
+            <span>Trusted by 15+ enterprises worldwide by delivering secure, scalable, and reliable software for businesses of all sizes.</span>
           </div>
         </div>
       </div>

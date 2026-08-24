@@ -23,9 +23,9 @@ export const Route = createFileRoute("/services")({
 
 const services = [
   {
-    icon: ClipboardCheck, title: "Manual Testing",
+    icon: ClipboardCheck, title: "Manual QA - Web & Mobile",
     desc: "Comprehensive functional, regression, exploratory, and usability testing to ensure reliable software releases.",
-    features: ["Functional testing", "Regression testing", "UI validation", "Cross-browser checks", "Bug reporting", "Release verification"],
+    features: ["Functional Testing", "UI/UX Testing", "Compatibility Testing", "Integration Testing", "Regression Testing", "System Testing", "Accessibility Testing", "Analytics Testing", "Ad Testing", "Usability Testing", "User Acceptance Testing", "End-to-End Testing"],
   },
   {
     icon: Bot, title: "Test Automation",
@@ -43,9 +43,14 @@ const services = [
     features: ["Load Testing", "Stress Testing", "Response Time Testing", "Scalability Testing", "Performance Regression Testing", "Bottleneck Analysis"],
   },
   {
-    icon: MonitorSmartphone, title: "Mobile & Web Testing",
-    desc: "End-to-end testing across browsers, devices, operating systems, and screen sizes for consistent experiences.",
-    features: ["Functional Testing", "UI/UX Testing", "Compatibility Testing", "Integration Testing", "Regression Testing", "System Testing", "Accessibility Testing", "Analytics Testing", "Ad Testing", "Usability Testing", "User Acceptance Testing", "End-to-End Testing"],
+    icon: MonitorSmartphone, title: "Database Testing",
+    desc: "Comprehensive testing of database systems to ensure data integrity, performance, and reliability.",
+    features: ["Functional Database Testing",
+"Data Integrity & Validation Testing",
+"Database Performance Testing",
+"Data Migration Testing",
+"Database Integration Testing",
+"Database Schema & Structure Testing"],
   },
   {
     icon: BriefcaseBusiness, title: "QA Consulting",
