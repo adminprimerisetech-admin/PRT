@@ -158,10 +158,10 @@ export function SiteFooter() {
                 <Mail className="h-4 w-4 text-primary shrink-0" />
 
                 <a
-                  href="mailto:admin.primerisetech@gmail.com"
+                  href="mailto:support@primerisetech.com"
                   className="hover:text-primary"
                 >
-                  admin.primerisetech@gmail.com
+                  support@primerisetech.com
                 </a>
               </li>
 

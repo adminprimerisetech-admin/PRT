@@ -49,7 +49,7 @@ function About() {
             At PrimeRiseTech, we believe quality is built into every stage of the software development journey.
           </p>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-             We are a software Quality Assurance and Testing company dedicated to helping businesses build reliable, secure, high-performing, and user-friendly digital products. From functional testing and automation to performance, API, mobile, and end-to-end testing, we provide the expertise and technology needed to identify risks early and deliver software with confidence.
+             We are a software Quality Assurance and Testing company dedicated to helping businesses build reliable, secure, high-performing, and user-friendly digital products. From Functional Testing and Automation to Performance, API, Mobile & Web, and End-to-End testing, we provide the expertise and technology needed to identify risks early and deliver software with confidence.
           </p>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
             We work with modern testing technologies, combining proven QA practices, automation, and continuous improvement to turn quality into a competitive advantage.
@@ -62,10 +62,10 @@ function About() {
         <div className="max-w-4xl mx-auto glass rounded-3xl p-10 sm:p-14 space-y-5 text-muted-foreground leading-relaxed">
           <p>
             <span className="text-foreground font-semibold">PrimeRiseTech was founded in 2021</span> by a group of senior engineers who
-            believed: "Great software isn't just about what you build - it's about how reliably it performs.""
+            believed: "Great software isn't just about what you build - it's about how reliably it performs."
           </p>
           <p>
-            What started with a focus on software testing has evolved into a quality engineering approach covering manual testing, test automation, API testing, performance testing, and web and mobile quality assurance.
+            What started with a focus on software testing has evolved into a quality engineering approach covering Manual Testing, Test Automation, API Testing, Performance Testing, and Web & Mobile quality assurance.
           </p>
           <p>
             Today, we work alongside development and product teams to identify risks early, improve test coverage, and deliver reliable software with confidence. Our goal remains simple:

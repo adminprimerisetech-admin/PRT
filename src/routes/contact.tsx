@@ -26,24 +26,56 @@ export const Route = createFileRoute("/contact")({
 });
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "admin.primerisetech@gmail.com", href: "mailto:admin.primerisetech@gmail.com" },
+  { icon: Mail, label: "Email", value: "support@primerisetech.com", href: "mailto:support@primerisetech.com" },
   { icon: Phone, label: "Phone", value: "+91 7359905993", href: "tel:+917359905993" },
   { icon: MapPin, label: "Office", value: "India: Unit 826, Shaligram Arcade, South Bopal, Ahmedabad" },
   { icon: Clock, label: "Hours", value: "Mon–Fri: 10AM – 7PM IST" },
 ];
 
+const WEB3FORMS_ACCESS_KEY = "383cf36a-2bcc-4860-a046-3e8dcb406eeb";
+
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", company: "", service: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       toast.error("Please fill in all required fields");
       return;
     }
-    setSubmitted(true);
-    toast.success("Thanks! We'll be in touch within 24 hours.");
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New contact form submission from ${form.name}`,
+          from_name: form.name,
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          service_of_interest: form.service,
+          message: form.message,
+        }),
+      });
+      const result = await res.json();
+      if (result.success) {
+        setSubmitted(true);
+        toast.success("Thanks! We'll be in touch within 24 hours.");
+      } else {
+        toast.error(result.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Something went wrong. Please check your connection and try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -173,9 +205,10 @@ function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-[1.02] transition"
+                  disabled={submitting}
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-[1.02] transition disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  Send Message <Send className="h-4 w-4" />
+                  {submitting ? "Sending..." : <>Send Message <Send className="h-4 w-4" /></>}
                 </button>
                 <p className="text-xs text-muted-foreground text-center">
                   By submitting, you agree to our privacy policy. We'll never share your info.
