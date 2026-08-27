@@ -27,9 +27,9 @@ export const Route = createFileRoute("/contact")({
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "admin.primerisetech@gmail.com", href: "mailto:admin.primerisetech@gmail.com" },
-  { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-  { icon: MapPin, label: "Office", value: "1234 Innovation Drive, San Francisco, CA 94107" },
-  { icon: Clock, label: "Hours", value: "Mon–Fri: 9AM – 6PM PST" },
+  { icon: Phone, label: "Phone", value: "+91 7359905993", href: "tel:+917359905993" },
+  { icon: MapPin, label: "Office", value: "India: Unit 826, Shaligram Arcade, South Bopal, Ahmedabad" },
+  { icon: Clock, label: "Hours", value: "Mon–Fri: 10AM – 7PM IST" },
 ];
 
 function Contact() {

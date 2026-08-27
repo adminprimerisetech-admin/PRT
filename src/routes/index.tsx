@@ -59,7 +59,6 @@ const process = [
 ];
 
 const tech = [
-"Test Management & Defect Tracking",
 "Jira",
 "Azure DevOps",
 "TestRail",
@@ -84,6 +83,9 @@ const tech = [
 "Jenkins",
 "GitHub Actions",
 "Proxyman",
+"axe DevTools"
+,"WAVE",
+,"NVDA"
 ];
 
 /*const testimonials = [

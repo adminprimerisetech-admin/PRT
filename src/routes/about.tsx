@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Target, Eye, Heart, Shield, Zap, Users2, TrendingUp, Sparkles } from "lucide-react";
+import { Target, Eye, Heart,BadgeCheck, Shield, Zap, Users2,Lightbulb, TrendingUp, Sparkles } from "lucide-react";
 import { Section } from "../components/section";
 
 export const Route = createFileRoute("/about")({
@@ -17,10 +17,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const values = [
-  { icon: Shield, title: "Integrity", desc: "We do what we say. Transparent pricing, honest timelines, no surprises." },
-  { icon: Zap, title: "Excellence", desc: "Craftsmanship at every layer — from code review to client communication." },
-  { icon: Users2, title: "Partnership", desc: "Your success is our metric. We win only when you win." },
-  { icon: TrendingUp, title: "Innovation", desc: "Continuous learning, always shipping the best-fit modern tooling." },
+  { icon: Shield, title: "Quality First", desc: "We put quality at the heart of everything we do. Our goal is not simply to find defects, but to help prevent them and continuously improve the overall product experience." },
+  { icon: BadgeCheck, title: "Excellence", desc: "We maintain high standards across every stage of testing, from test strategy and planning to execution, automation, reporting, and continuous improvement." },
+  { icon: Users2, title: "Partnership", desc: "We believe the best results come from collaboration. We work closely with developers, product teams, and stakeholders to make quality a shared responsibility." },
+  { icon: Lightbulb, title: "Innovation", desc: "Technology never stands still, and neither do we. We continuously explore automation, AI-assisted testing, modern QA tools, and smarter methodologies to make testing more efficient and effective." },
 ];
 
 const team = [
@@ -46,27 +46,30 @@ function About() {
             Building Confidence Through<span className="text-gradient"> Software Quality</span> 
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            PrimeRiseTech provides end-to-end QA and testing solutions that help businesses identify defects early, reduce production risks, and deliver reliable software faster.
+            At PrimeRiseTech, we believe quality is built into every stage of the software development journey.
+          </p>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+             We are a software Quality Assurance and Testing company dedicated to helping businesses build reliable, secure, high-performing, and user-friendly digital products. From functional testing and automation to performance, API, mobile, and end-to-end testing, we provide the expertise and technology needed to identify risks early and deliver software with confidence.
+          </p>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+            We work with modern testing technologies, combining proven QA practices, automation, and continuous improvement to turn quality into a competitive advantage.
           </p>
         </div>
       </section>
 
       {/* STORY */}
-      <Section eyebrow="Our Story" title={<>From Ideas<span className="text-gradient"> to Reality</span></>}>
+      <Section eyebrow="Our Story" title={<>From Testing to<span className="text-gradient"> Quality Engineering</span></>}>
         <div className="max-w-4xl mx-auto glass rounded-3xl p-10 sm:p-14 space-y-5 text-muted-foreground leading-relaxed">
           <p>
             <span className="text-foreground font-semibold">PrimeRiseTech was founded in 2021</span> by a group of senior engineers who
-            believed enterprise software could be built better — faster, more secure, and more human.
+            believed: "Great software isn't just about what you build - it's about how reliably it performs.""
           </p>
           <p>
-            What began as a five-person consultancy in San Francisco has grown into a global network
-            of 200+ specialists across three continents. We've partnered with startups that became
-            unicorns, and Fortune 500 companies reinventing themselves for the digital era.
+            What started with a focus on software testing has evolved into a quality engineering approach covering manual testing, test automation, API testing, performance testing, and web and mobile quality assurance.
           </p>
           <p>
-            Today, our work spans custom software, cloud transformation, AI systems, and strategic
-            technology advisory. But our founding principle hasn't changed:
-            <span className="text-foreground font-semibold"> deliver work we'd be proud to sign our names to.</span>
+            Today, we work alongside development and product teams to identify risks early, improve test coverage, and deliver reliable software with confidence. Our goal remains simple:
+            <span className="text-foreground font-semibold"> make quality an integral part of every release.</span>
           </p>
         </div>
       </Section>
@@ -78,19 +81,19 @@ function About() {
             <Target className="h-12 w-12 text-primary" />
             <h3 className="mt-6 text-3xl font-bold">Our Mission</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              To empower organizations to thrive in the digital age by delivering world-class
-              software solutions that solve real business problems — engineered with integrity,
-              designed with empathy, and built to last.
+              To empower businesses with smarter, faster, and more reliable software testing solutions.
             </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              At PrimeRiseTech, we combine skilled QA expertise with quality-first mindset to identify risks early, improve product performance, accelerate releases, and help our clients deliver exceptional digital experiences.            </p>
           </div>
           <div className="glass rounded-3xl p-10 glass-hover animate-fade-up" style={{ animationDelay: "0.1s" }}>
             <Eye className="h-12 w-12 text-primary" />
             <h3 className="mt-6 text-3xl font-bold">Our Vision</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              A world where every organization — from ambitious startups to global enterprises —
-              can access the same caliber of engineering talent and strategic guidance that powers
-              the world's most innovative companies.
+              To become a trusted global leader in software quality, transforming the way businesses build, test, and deliver reliable digital products.
             </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+We envision a future where quality is embedded into every development process and every business can deliver digital experiences that customers can trust.            </p>
           </div>
         </div>
       </Section>
