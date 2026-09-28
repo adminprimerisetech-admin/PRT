@@ -35,6 +35,7 @@ const team = [
 function About() {
   return (
     <>
+    {/*
       <section className="relative pt-40 pb-20 overflow-hidden">
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="absolute top-20 left-1/4 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
@@ -46,10 +47,10 @@ function About() {
             Building Confidence Through<span className="text-gradient"> Software Quality</span> 
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            At PrimeRiseTech, we believe quality is built into every stage of the software development journey.
+             At PrimeRiseTech, we help businesses deliver reliable, secure, high-performing, and user-friendly software through expert Quality Assurance and Testing.
           </p>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-             We are a software Quality Assurance and Testing company dedicated to helping businesses build reliable, secure, high-performing, and user-friendly digital products. From Functional Testing and Automation to Performance, API, Mobile, and End-to-End Testing, we provide the expertise and technology needed to identify risks early and deliver software with confidence.
+             From Manual Testing and Test Automation to API, Performance, Web, Mobile, Regression, and End-to-End Testing, we combine proven QA practices with modern testing technologies to identify defects early, reduce risks, and strengthen product quality.
           </p>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
             We work with modern testing technologies, combining proven QA practices, automation, and continuous improvement to turn quality into a competitive advantage.
@@ -61,15 +62,17 @@ function About() {
       <Section eyebrow="Our Story" title={<>From Testing to<span className="text-gradient"> Quality Engineering</span></>}>
         <div className="max-w-4xl mx-auto glass rounded-3xl p-10 sm:p-14 space-y-5 text-muted-foreground leading-relaxed">
           <p>
-            <span className="text-foreground font-semibold">PrimeRiseTech was founded in 2021</span> by a group of senior engineers who
-            believed: "Great software isn't just about what you build - it's about how reliably it performs."
+            At PrimeRiseTech, we help businesses deliver reliable, secure, high-performing, and user-friendly software through expert Quality Assurance and Testing.
           </p>
           <p>
-            What started with a focus on software testing has evolved into a quality engineering approach covering Manual Testing, Test Automation, API Testing, Performance Testing, and Web & Mobile quality assurance.
+            From Manual Testing and Test Automation to API, Performance, Web, Mobile, Regression, and End-to-End Testing, we combine proven QA practices with modern testing technologies to identify defects early, reduce risks, and strengthen product quality.
           </p>
           <p>
-            Today, we work alongside development and product teams to identify risks early, improve test coverage, and deliver reliable software with confidence. Our goal remains simple:
-            <span className="text-foreground font-semibold"> Make quality an integral part of every release.</span>
+            We work closely with development and product teams throughout the software lifecycle, providing comprehensive test coverage and clear quality insights to help teams make confident release decisions.Our goal remains simple:
+            <span className="text-foreground font-semibold"> Better quality. Lower risk. Greater confidence. Every release.</span>
+          </p>
+          <p>
+            Your product represents your brand, your investment, and your customers' trust. That's why we treat software quality as more than a final testing step - it's a responsibility built into every stage of development.
           </p>
         </div>
       </Section>

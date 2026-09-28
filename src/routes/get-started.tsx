@@ -253,7 +253,7 @@ function GetStarted() {
                 {submitting ? "Sending..." : <>Get My Free Plan <Send className="h-4 w-4" /></>}
               </button>
               <p className="text-xs text-muted-foreground text-center">
-                By submitting, you agree to our privacy policy. We'll never share your info.{" "}
+                Tell us what you need, and we'll get back to you shortly. We'll never share your info.{" "}
                 Prefer to just ask a question? <Link to="/contact" className="text-primary hover:underline">Contact us instead <ArrowRight className="inline h-3 w-3" /></Link>
               </p>
             </form>

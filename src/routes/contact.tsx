@@ -124,6 +124,7 @@ function Contact() {
               </div>
             </div>
 
+            {/* Map temporarily disabled
             <div className="glass rounded-3xl overflow-hidden border border-primary/20">
               <iframe
                 title="PrimeRiseTech Office Location"
@@ -135,6 +136,7 @@ function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
+            */}
           </div>
 
           {/* Form */}

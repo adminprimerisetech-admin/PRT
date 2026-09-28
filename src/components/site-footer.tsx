@@ -6,20 +6,16 @@ import {
   MapPin,
   Linkedin,
   Instagram,
+  Facebook
 } from "lucide-react";
 
-// Official-style X logo
+/* Official-style X logo — currently disabled
 const XLogo = ({ className = "" }: { className?: string }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-  >
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.963 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
   </svg>
 );
+*/
 
 export function SiteFooter() {
   return (
@@ -43,8 +39,7 @@ export function SiteFooter() {
             </Link>
 
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Helping businesses ship reliable software through risk-based QA,
-              testing, and automation.
+              Helping businesses deliver better software through quality-focused QA and automation.
             </p>
 
             {/* Social Media */}
@@ -52,17 +47,24 @@ export function SiteFooter() {
               {[
                 {
                   icon: Linkedin,
-                  href: "https://www.linkedin.com",
+                  href: "https://www.linkedin.com/in/primerisetech-undefined-b409a6431/",
                   label: "LinkedIn",
                 },
+                /* X social link — currently disabled
                 {
                   icon: XLogo,
                   href: "https://x.com",
                   label: "X",
                 },
+                */
+                {
+                  icon: Facebook,
+                  href: "https://www.facebook.com/profile.php?id=61593809043258",
+                  label: "Facebook",
+                },
                 {
                   icon: Instagram,
-                  href: "https://www.instagram.com",
+                  href: "https://www.instagram.com/primerisetech/",
                   label: "Instagram",
                 },
               ].map(({ icon: Icon, href, label }) => (
@@ -121,7 +123,10 @@ export function SiteFooter() {
               <li>Test Automation</li>
               <li>API Testing</li>
               <li>Performance Testing</li>
+              <li>Database Testing</li>
               <li>QA Consulting</li>
+              
+              
             </ul>
           </div>
 

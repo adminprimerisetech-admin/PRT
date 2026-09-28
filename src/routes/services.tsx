@@ -30,12 +30,12 @@ const services = [
   {
     icon: Bot, title: "Test Automation",
     desc: "Automated testing for web and mobile applications to ensure quality and performance.",
-    features: ["Selenium & Appium", "Cypress & Playwright", "TestNG & JUnit", "CI/CD integration", "Reporting & analytics", "Cross-platform compatibility"],
+    features: ["Selenium & Appium", "Cypress & Playwright", "TestNG & JUnit", "CI/CD Integration", "Reporting & Analytics", "Cross-Platform Compatibility"],
   },
   {
     icon: Network, title: "API Testing",
     desc: "Thorough API validation covering functionality, data integrity, integrations, authentication, and performance.",
-    features: ["API endpoint Testing", "Authentication & Authorization", "Integration Testing", "Error Handling", "Rate Limiting & Throttling", "Versioning & Backward Compatibility"],
+    features: ["API Endpoint Testing", "Authentication & Authorization", "Integration Testing", "Error Handling", "Rate Limiting & Throttling", "Versioning & Backward Compatibility"],
   },
   {
     icon: Gauge, title: "Performance Testing",
@@ -55,7 +55,7 @@ const services = [
   {
     icon: BriefcaseBusiness, title: "QA Consulting",
     desc: "Strategic QA guidance, test strategy, process improvement, and quality engineering solutions tailored to your business.",
-    features: ["QA strategy & planning", "Test process optimization", "Automation strategy", "Quality engineering", "QA team mentoring", "CI/CD quality integration"],
+    features: ["QA Strategy & Planning", "Test Process Optimization", "Automation Strategy", "Quality Engineering", "QA Team Mentoring", "CI/CD Quality Integration"],
   },
 ];
 
@@ -73,8 +73,7 @@ function Services() {
             Full-Stack <span className="text-gradient">Digital Expertise</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Six specialized practices, one integrated team. Everything you need to design,
-            build, launch, and scale — under one roof.
+            From test strategy to automation and performance testing, everything you need to ship high-quality software with confidence.
           </p>
         </div>
       </section>

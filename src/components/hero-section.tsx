@@ -1,27 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Star } from "lucide-react";
 import heroImg from "../assets/hero-tech.jpg";
 
 export function HeroSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [scrollY, setScrollY] = useState(0);
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY);
-    const onMove = (e: MouseEvent) => {
-      const w = window.innerWidth, h = window.innerHeight;
-      setMouse({ x: (e.clientX / w - 0.5) * 2, y: (e.clientY / h - 0.5) * 2 });
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("mousemove", onMove);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("mousemove", onMove);
-    };
-  }, []);
-
   // Deterministic particle positions (avoid SSR/CSR mismatch)
   const particles = Array.from({ length: 24 }, (_, i) => ({
     left: (i * 37) % 100,
@@ -33,24 +14,16 @@ export function HeroSection() {
 
   return (
     <section
-      ref={ref}
       className="relative min-h-screen flex items-center pt-24 overflow-hidden"
     >
-      {/* Background image with parallax */}
-      <div
-        aria-hidden
-        className="absolute inset-0 will-change-transform"
-        style={{
-          transform: `translate3d(${mouse.x * -12}px, ${scrollY * 0.3 + mouse.y * -8}px, 0) scale(1.08)`,
-          transition: "transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)",
-        }}
-      >
+      {/* Static background image */}
+      <div aria-hidden className="absolute inset-0">
         <img
           src={heroImg}
           alt=""
           width={1920}
           height={1024}
-          className="h-full w-full object-cover object-right animate-hero-float"
+          className="h-full w-full object-cover object-right"
         />
         {/* Gradient scrims: strong on left for text legibility, subtle on right */}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/10" />
