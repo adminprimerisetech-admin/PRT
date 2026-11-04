@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
 import { Section } from "../components/section";
 import {
   Select,
@@ -15,9 +15,17 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — PrimeRiseTech" },
-      { name: "description", content: "Get in touch with PrimeRiseTech. Free consultation, 24h response, and dedicated senior engineers ready to help." },
+      {
+        name: "description",
+        content:
+          "Get in touch with PrimeRiseTech. Free consultation, 24h response, and dedicated senior engineers ready to help.",
+      },
       { property: "og:title", content: "Contact Us — PrimeRiseTech" },
-      { property: "og:description", content: "Get in touch with PrimeRiseTech. Free consultation, 24h response, and dedicated senior engineers ready to help." },
+      {
+        property: "og:description",
+        content:
+          "Get in touch with PrimeRiseTech. Free consultation, 24h response, and dedicated senior engineers ready to help.",
+      },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -26,9 +34,17 @@ export const Route = createFileRoute("/contact")({
 });
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "support@primerisetech.com", href: "mailto:support@primerisetech.com" },
-  { icon: Phone, label: "Phone", value: "+91 7359905993", href: "tel:+917359905993" },
-  { icon: MapPin, label: "Office", value: "India: Unit 826, Shaligram Arcade, South Bopal, Ahmedabad" },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "support@primerisetech.com",
+    href: "mailto:support@primerisetech.com",
+  },
+  {
+    icon: MapPin,
+    label: "Office",
+    value: "India: Unit 826, Shaligram Arcade, South Bopal, Ahmedabad",
+  },
   { icon: Clock, label: "Hours", value: "Mon–Fri: 10AM – 7PM IST" },
 ];
 
@@ -112,9 +128,16 @@ function Contact() {
                       <c.icon className="h-5 w-5 text-primary-foreground" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-xs font-semibold text-primary uppercase tracking-wider">{c.label}</div>
+                      <div className="text-xs font-semibold text-primary uppercase tracking-wider">
+                        {c.label}
+                      </div>
                       {c.href ? (
-                        <a href={c.href} className="text-sm hover:text-primary transition break-words">{c.value}</a>
+                        <a
+                          href={c.href}
+                          className="text-sm hover:text-primary transition break-words"
+                        >
+                          {c.value}
+                        </a>
                       ) : (
                         <div className="text-sm break-words">{c.value}</div>
                       )}
@@ -147,9 +170,14 @@ function Contact() {
                   <CheckCircle2 className="h-10 w-10 text-primary-foreground" />
                 </div>
                 <h3 className="mt-6 text-2xl font-bold">Message Sent!</h3>
-                <p className="mt-2 text-muted-foreground">We'll respond within 24 hours. Talk soon.</p>
+                <p className="mt-2 text-muted-foreground">
+                  We'll respond within 24 hours. Talk soon.
+                </p>
                 <button
-                  onClick={() => { setSubmitted(false); setForm({ name: "", email: "", company: "", service: "", message: "" }); }}
+                  onClick={() => {
+                    setSubmitted(false);
+                    setForm({ name: "", email: "", company: "", service: "", message: "" });
+                  }}
                   className="mt-6 rounded-full glass px-6 py-2.5 text-sm font-semibold hover:text-primary transition"
                 >
                   Send another
@@ -159,12 +187,30 @@ function Contact() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <h2 className="text-2xl font-bold">Send us a message</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Full Name *" value={form.name} onChange={(v) => setForm({ ...form, name: v })} placeholder="Jane Doe" />
-                  <Field label="Email *" type="email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} placeholder="jane@company.com" />
+                  <Field
+                    label="Full Name *"
+                    value={form.name}
+                    onChange={(v) => setForm({ ...form, name: v })}
+                    placeholder="Jane Doe"
+                  />
+                  <Field
+                    label="Email *"
+                    type="email"
+                    value={form.email}
+                    onChange={(v) => setForm({ ...form, email: v })}
+                    placeholder="jane@company.com"
+                  />
                 </div>
-                <Field label="Company" value={form.company} onChange={(v) => setForm({ ...form, company: v })} placeholder="Your company" />
+                <Field
+                  label="Company"
+                  value={form.company}
+                  onChange={(v) => setForm({ ...form, company: v })}
+                  placeholder="Your company"
+                />
                 <div>
-                  <label className="text-xs font-semibold text-primary uppercase tracking-wider">Service of Interest</label>
+                  <label className="text-xs font-semibold text-primary uppercase tracking-wider">
+                    Service of Interest
+                  </label>
                   <Select
                     value={form.service || undefined}
                     onValueChange={(value) => setForm({ ...form, service: value })}
@@ -174,29 +220,49 @@ function Contact() {
                     </SelectTrigger>
 
                     <SelectContent className="border border-border bg-[#0f1f34] text-white">
-                      <SelectItem value="Manual Testing" className="text-white focus:bg-[#15385d] focus:text-white">
+                      <SelectItem
+                        value="Manual Testing"
+                        className="text-white focus:bg-[#15385d] focus:text-white"
+                      >
                         Manual Testing
                       </SelectItem>
-                      <SelectItem value="Test Automation" className="text-white focus:bg-[#15385d] focus:text-white">
+                      <SelectItem
+                        value="Test Automation"
+                        className="text-white focus:bg-[#15385d] focus:text-white"
+                      >
                         Test Automation
                       </SelectItem>
-                      <SelectItem value="API Testing" className="text-white focus:bg-[#15385d] focus:text-white">
+                      <SelectItem
+                        value="API Testing"
+                        className="text-white focus:bg-[#15385d] focus:text-white"
+                      >
                         API Testing
                       </SelectItem>
-                      <SelectItem value="Performance Testing" className="text-white focus:bg-[#15385d] focus:text-white">
+                      <SelectItem
+                        value="Performance Testing"
+                        className="text-white focus:bg-[#15385d] focus:text-white"
+                      >
                         Performance Testing
                       </SelectItem>
-                      <SelectItem value="UI/UX Testing" className="text-white focus:bg-[#15385d] focus:text-white">
+                      <SelectItem
+                        value="UI/UX Testing"
+                        className="text-white focus:bg-[#15385d] focus:text-white"
+                      >
                         UI/UX Testing
                       </SelectItem>
-                      <SelectItem value="QA Consulting" className="text-white focus:bg-[#15385d] focus:text-white">
+                      <SelectItem
+                        value="QA Consulting"
+                        className="text-white focus:bg-[#15385d] focus:text-white"
+                      >
                         QA Consulting
                       </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-primary uppercase tracking-wider">Message *</label>
+                  <label className="text-xs font-semibold text-primary uppercase tracking-wider">
+                    Message *
+                  </label>
                   <textarea
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -210,7 +276,13 @@ function Contact() {
                   disabled={submitting}
                   className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-[1.02] transition disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  {submitting ? "Sending..." : <>Send Message <Send className="h-4 w-4" /></>}
+                  {submitting ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      Send Message <Send className="h-4 w-4" />
+                    </>
+                  )}
                 </button>
                 <p className="text-xs text-muted-foreground text-center">
                   By submitting, you agree to our privacy policy. We'll never share your info.
@@ -224,8 +296,18 @@ function Contact() {
   );
 }
 function Field({
-  label, value, onChange, placeholder, type = "text",
-}: { label: string; value: string; onChange: (v: string) => void; placeholder?: string; type?: string }) {
+  label,
+  value,
+  onChange,
+  placeholder,
+  type = "text",
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  placeholder?: string;
+  type?: string;
+}) {
   return (
     <div>
       <label className="text-xs font-semibold text-primary uppercase tracking-wider">{label}</label>
@@ -239,4 +321,3 @@ function Field({
     </div>
   );
 }
-

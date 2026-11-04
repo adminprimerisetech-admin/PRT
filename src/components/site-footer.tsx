@@ -1,13 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import {
-  Zap,
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Instagram,
-  Facebook
-} from "lucide-react";
+import { Zap, Mail, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
 
 /* Official-style X logo — currently disabled
 const XLogo = ({ className = "" }: { className?: string }) => (
@@ -22,15 +14,11 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-border/50">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2">
               <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-primary">
-                <Zap
-                  className="h-5 w-5 text-primary-foreground"
-                  strokeWidth={2.5}
-                />
+                <Zap className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
               </div>
 
               <span className="font-display text-xl font-bold">
@@ -101,6 +89,12 @@ export function SiteFooter() {
               </li>
 
               <li>
+                <Link to="/qa-training" className="hover:text-primary">
+                  QA Training
+                </Link>
+              </li>
+
+              <li>
                 <Link to="/contact" className="hover:text-primary">
                   Contact Us
                 </Link>
@@ -125,8 +119,6 @@ export function SiteFooter() {
               <li>Performance Testing</li>
               <li>Database Testing</li>
               <li>QA Consulting</li>
-              
-              
             </ul>
           </div>
 
@@ -140,59 +132,30 @@ export function SiteFooter() {
                 <span>Canada: 37, Wayne Avenue, Oshawa</span>
               </li>
 
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary shrink-0" />
-                <a href="tel:+16477619033" className="hover:text-primary">
-                  +1 6477619033
-                </a>
-              </li>
-
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <span>India: Unit 826, Shaligram Arcade, South Bopal, Ahmedabad</span>
               </li>
 
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary shrink-0" />
-                <a href="tel:+917359905993" className="hover:text-primary">
-                  +91 7359905993 
-                </a>
-              </li>
-
-              <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
 
-                <a
-                  href="mailto:support@primerisetech.com"
-                  className="hover:text-primary"
-                >
+                <a href="mailto:support@primerisetech.com" className="hover:text-primary">
                   support@primerisetech.com
                 </a>
               </li>
-
-              {/* <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>+1 6477619033 </span>
-                <span>+91 7359905993  </span>
-              </li> */}
             </ul>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between gap-3 text-sm text-muted-foreground">
-          <p>
-            © {new Date().getFullYear()} PrimeRiseTech. All rights reserved.
-          </p>
+          <p>© {new Date().getFullYear()} PrimeRiseTech. All rights reserved.</p>
 
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary">
-              
-            </a>
+            <a href="#" className="hover:text-primary"></a>
 
-            <a href="#" className="hover:text-primary">
-
-            </a>
+            <a href="#" className="hover:text-primary"></a>
           </div>
         </div>
       </div>

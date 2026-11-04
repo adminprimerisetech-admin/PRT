@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GetStartedRouteImport } from './routes/get-started'
+import { Route as QaTrainingRouteImport } from './routes/qa-training'
 import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +36,11 @@ const GetStartedRoute = GetStartedRouteImport.update({
   path: '/get-started',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QaTrainingRoute = QaTrainingRouteImport.update({
+  id: '/qa-training',
+  path: '/qa-training',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/get-started': typeof GetStartedRoute
+  '/qa-training': typeof QaTrainingRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/get-started': typeof GetStartedRoute
+  '/qa-training': typeof QaTrainingRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,24 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/get-started': typeof GetStartedRoute
+  '/qa-training': typeof QaTrainingRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/get-started' | '/services'
+  fullPaths:
+    '/' | '/about' | '/contact' | '/get-started' | '/qa-training' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/get-started' | '/services'
-  id: '__root__' | '/' | '/about' | '/contact' | '/get-started' | '/services'
+  to:
+    '/' | '/about' | '/contact' | '/get-started' | '/qa-training' | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/get-started'
+    | '/qa-training'
+    | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +94,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   GetStartedRoute: typeof GetStartedRoute
+  QaTrainingRoute: typeof QaTrainingRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -109,6 +128,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GetStartedRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/qa-training': {
+      id: '/qa-training'
+      path: '/qa-training'
+      fullPath: '/qa-training'
+      preLoaderRoute: typeof QaTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -124,6 +150,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   GetStartedRoute: GetStartedRoute,
+  QaTrainingRoute: QaTrainingRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
