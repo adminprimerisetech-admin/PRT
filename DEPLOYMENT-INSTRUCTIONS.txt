@@ -1,0 +1,14 @@
+PrimeRiseTech - GITHUB / HOSTINGER STATIC DEPLOYMENT
+
+This ZIP contains ready-to-host static HTML/CSS/JS. No npm or Node.js build is required on Hostinger.
+
+1. BACK UP existing files on Hostinger first.
+2. In your existing GitHub repository, switch to the branch selected by Hostinger (usually main).
+3. Remove obsolete root website files and upload the CONTENTS of this ZIP to the ROOT of that branch. DO NOT upload the ZIP file itself and DO NOT create a surrounding folder. Commit the update.
+4. Root must contain index.html, assets/, qa-training/, about/, services/, contact/ and .htaccess.
+5. In Hostinger hPanel > Websites > your site > Advanced > Git, verify repository, branch, deployed directory (normally public_html), and auto-deployment. Click Redeploy if necessary.
+6. If using Hostinger File Manager instead: extract the CONTENTS of ZIP directly into public_html, overwriting the older files. GitHub changes alone will not deploy unless Git integration is configured correctly.
+7. Clear Hostinger website cache/CDN and hard-refresh browser (Ctrl+Shift+R).
+8. Check /, /services/, /qa-training/, /contact/. Submit the QA enquiry form only when ready to test that email destination.
+
+IMPORTANT: This is a STATIC DEPLOYMENT PACKAGE, not the editable React source project. Your original ZIP includes React source, but the root HTML and bundles were not built with the new QA page. This package includes an independent working QA page and navigation without requiring npm builds. For longer-term development, set up a reliable build pipeline (CI) and deploy the produced static output instead of older compiled files.

@@ -1,0 +1,19 @@
+PRIMERISETECH - CORRECTED GITHUB REPOSITORY
+
+This repository contains your original React/TanStack source AND updated static pages at repository root.
+
+WHAT TO DO
+1. Extract THIS ZIP locally.
+2. Upload the extracted files and folders to your existing GitHub repository's DEPLOYED BRANCH root (typically main). Do not upload this ZIP as a single file.
+3. Allow hidden files in the upload; .htaccess is important on Apache hosting.
+4. Commit the updates.
+5. In Hostinger's Git deployment page, confirm the repository and branch. Trigger Deploy/Redeploy if auto-deployment is disabled.
+6. Confirm the deployed document root contains index.html, assets/, qa-training/, qa-training-navigation.js, and .htaccess.
+7. Test https://primerisetech.com/qa-training/ and the homepage header. Clear browser/server cache as needed.
+
+IMPORTANT
+- If Hostinger's document root is public_html, deploy the CONTENTS of this repository to public_html, not to a nested folder.
+- Source code changes on their own do not update a prebuilt static deployment.
+- If Hostinger has a build process that overwrites root HTML with an old build, point deployment to the prebuilt static files instead or configure a correct build pipeline.
+- Existing source code is included, but the QA Training page in this output is the prebuilt standalone static page.
+- Verify real hosting and navigation after deployment; no live deployment access was available during package preparation.

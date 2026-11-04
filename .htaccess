@@ -1,0 +1,15 @@
+Options -Indexes
+DirectoryIndex index.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^(about|services|contact|get-started|qa-training)/?$ $1/index.html [L]
+RewriteRule ^ /404.html [L]
+</IfModule>
+<IfModule mod_headers.c>
+<FilesMatch "\.html$">
+Header set Cache-Control "no-cache, max-age=0, must-revalidate"
+</FilesMatch>
+</IfModule>
