@@ -88,7 +88,7 @@ function QaTraining() {
     name: "",
     email: "",
     phone: "",
-    experience: "Working professional / QA professional",
+    experience: "Beginner / Fresher",
     training: "Complete QA Training Program",
     questions: "",
   });
@@ -217,7 +217,7 @@ function QaTraining() {
                     name: "",
                     email: "",
                     phone: "",
-                    experience: "Working professional / QA professional",
+                    experience: "Beginner / Fresher",
                     training: "Complete QA Training Program",
                     questions: "",
                   });
