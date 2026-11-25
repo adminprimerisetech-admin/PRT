@@ -1,1 +1,0 @@
-Deploy extracted repository contents to the document root. Verify qa-training.html exists directly beside index.html in public_html. Open /qa-training.html directly before testing header and footer. Both links use this explicit file. Preserve .htaccess for the old URL.
