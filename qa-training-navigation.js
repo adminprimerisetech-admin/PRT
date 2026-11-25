@@ -7,5 +7,15 @@ document.querySelectorAll('header').forEach(h=>{h.querySelectorAll('a[href]').fo
 document.querySelectorAll('footer li').forEach(li=>{const a=[...li.children].find(a=>a.matches('a[href]')&&path(a)==='/services');if(!a)return;const list=li.parentElement;let q=[...list.querySelectorAll('a[href]')].find(isQA);if(!q){q=linkFrom(a);const row=li.cloneNode(false);row.append(q);li.after(row);}else if(q.parentElement===li){const row=li.cloneNode(false);row.append(q);li.after(row);}if(q.getAttribute('href')!='/qa-training.html')q.href='/qa-training.html';});
 }
 new MutationObserver(ensure).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['href']});ensure();document.addEventListener('DOMContentLoaded',ensure);
-document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');if(!a||!isQA(a)||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();e.stopImmediatePropagation();location.assign('/qa-training.html');},true);
+// Use the deployed static documents for all primary navigation, not the SPA router.
+const destinations={'':'/','/about':'/about/','/services':'/services/','/contact':'/contact/','/get-started':'/get-started/','/qa-training':'/qa-training.html','/qa-training.html':'/qa-training.html','/qa-training/index.html':'/qa-training.html'};
+window.addEventListener('click',e=>{
+ const a=e.target.closest&&e.target.closest('a[href]');
+ if(!a||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.hasAttribute('download')||(a.target&&a.target!=='_self'))return;
+ const u=new URL(a.href,location.href);if(u.origin!==location.origin||u.hash)return;
+ const target=destinations[path(a)];if(!target)return;
+ e.preventDefault();e.stopImmediatePropagation();location.assign(target+u.search);
+},true);
+window.addEventListener('pageshow',ensure);
+window.addEventListener('popstate',ensure);
 })();
